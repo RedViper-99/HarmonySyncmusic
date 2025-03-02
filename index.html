@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HarmonySync - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ensure the index page is non-scrollable */
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- Full Screen Video Background -->
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="Videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header (Transparent for Home) -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <div class="logo">
+        <h1>HarmonySync</h1>
+      </div>
+      <nav>
+        <ul class="nav-links d-flex list-unstyled mb-0">
+          <li class="mx-2"><a href="index.html" class="active">Home</a></li>
+          <li class="mx-2"><a href="features.html">Features</a></li>
+          <li class="mx-2"><a href="pricing.html">Plans</a></li>
+          <li class="mx-2"><a href="about.html">About</a></li>
+          <li class="mx-2"><a href="contact.html">Contact</a></li>
+          <!-- Subscribe Button -->
+          <li class="mx-2"><a href="https://forms.gle/zbcgu3hpRKMYy6oPA" target="_blank" class="subscribe-btn">Subscribe</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content">
+      <h2>Adaptive Music Recommendations,<br>Perfectly Tuned to You</h2>
+      <p>Experience a new era of music personalization with HarmonySync.</p>
+      <a href="features.html" class="btn btn-theme">Discover More</a>
+    </div>
+  </section>
+
+  <!-- Full-Width Footer (Fixed at Bottom) -->
+  <footer class="full-footer">
+    <div class="container text-center py-4">
+      <p>&copy; 2025 HarmonySync. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Optional custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

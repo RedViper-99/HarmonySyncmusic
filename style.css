@@ -1,0 +1,275 @@
+/*---------------------------------------------------------------
+  HarmonySync Custom CSS – Inspired by Niotech Theme
+---------------------------------------------------------------*/
+
+/* 1. Import Fonts & Define Variables */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000&display=swap');
+
+:root {
+  --body: #fff;
+  --black: #000;
+  --white: #fff;
+  --theme: #7444FD;
+  --theme2: #F9F3EF;
+  --theme3: #FAF8FF;
+  --title: #282C32;
+  --header: #282C32;
+  --orange: #e78c45;
+  --text: #858585;
+  --border: #E6E6E6;
+  --bg-1: #161921;
+  --box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+}
+
+/* 2. Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--white);
+}
+
+/* 3. Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* 4. Header Styles */
+header {
+  padding: 20px 0;
+  position: relative;
+  z-index: 100;
+}
+header .logo h1 {
+  font-size: 28px;
+  color: var(--white);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--theme);
+}
+
+/* Solid Header for Inner Pages */
+.solid-header {
+  background: var(--header);
+}
+.solid-header .logo h1,
+.solid-header .nav-links li a {
+  color: var(--white);
+}
+
+/* 5. Menu Toggle (for Mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: var(--white);
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+/* 6. Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+}
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* 7. Button Theme */
+.btn-theme {
+  background: var(--theme);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.btn-theme:hover {
+  background: #5e2fd6; /* slightly darker shade */
+}
+
+/* 8. Full-Width Footer (Fixed at Bottom) */
+.full-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header);
+}
+.full-footer .container {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+/* 9. Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--title);
+  margin-bottom: 10px;
+}
+.section-title p {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* 10. Features Page */
+.features {
+  padding: 80px 0;
+  background: var(--white);
+}
+.features .feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+.features .feature-item:last-child {
+  border-bottom: none;
+}
+.features .feature-item img {
+  width: 40%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.features .feature-item:hover img {
+  transform: scale(1.05);
+}
+.features .feature-item .feature-text {
+  width: 55%;
+  padding-left: 40px;
+  color: var(--text);
+}
+.features .feature-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.features .feature-item:nth-child(even) .feature-text {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+/* 11. About Page */
+.about {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--theme2), var(--theme3));
+  color: var(--title);
+}
+.about .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.about .about-content h3 {
+  margin-top: 30px;
+  font-size: 1.75rem;
+  color: var(--title);
+}
+
+/* 12. Pricing Page */
+.pricing {
+  padding: 80px 0;
+  background: var(--white);
+}
+.pricing .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.pricing .price {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.pricing .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+/* 13. Contact Page */
+.contact {
+  padding: 80px 0;
+  background: var(--white);
+}
+.contact .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 14. Utility Classes */
+.text-center { text-align: center; }
+.mb-20 { margin-bottom: 20px; }
+
+/* 15. Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links { flex-direction: column; text-align: center; }
+  .menu-toggle { display: flex; }
+  .hero-content h2 { font-size: 2.5rem; }
+  .hero-content p { font-size: 1rem; }
+  .features .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features .feature-item img {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  .features .feature-item .feature-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
