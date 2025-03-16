@@ -132,7 +132,8 @@ header .logo h1 {
   background: #5e2fd6; /* slightly darker shade */
 }
 
-/* 8. Full-Width Footer (Fixed at Bottom) */
+/* 8. Footer Styles */
+/* For Home Page (fixed at bottom) */
 .full-footer {
   position: fixed;
   bottom: 0;
@@ -141,6 +142,19 @@ header .logo h1 {
   background: var(--header);
 }
 .full-footer .container {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+}
+
+/* For Inner Pages (footer after content) */
+.inner-footer {
+  position: relative;
+  width: 100%;
+  background: var(--header);
+  margin-top: 40px;
+}
+.inner-footer .container {
   padding: 20px 0;
   text-align: center;
   color: var(--white);
