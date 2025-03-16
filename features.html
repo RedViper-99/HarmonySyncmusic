@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-57BJVQ0LR5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-57BJVQ0LR5');
-</script>
+  <!-- Google Tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-57BJVQ0LR5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-57BJVQ0LR5');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HarmonySync - Features</title>
@@ -26,13 +25,18 @@
         <h1>HarmonySync</h1>
       </div>
       <nav>
-        <ul class="nav-links d-flex list-unstyled mb-0">
-          <li class="mx-2"><a href="index.html">Home</a></li>
-          <li class="mx-2"><a href="features.html" class="active">Features</a></li>
-          <li class="mx-2"><a href="pricing.html">Plans</a></li>
-          <li class="mx-2"><a href="about.html">About</a></li>
-          <li class="mx-2"><a href="contact.html">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html" class="active">Features</a></li>
+          <li><a href="pricing.html">Plans</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </div>
   </header>
@@ -45,7 +49,7 @@
     </div>
 
     <!-- Feature 1 -->
-    <div class="feature-item d-flex align-items-center justify-content-between mb-4">
+    <div class="feature-item">
       <img src="images/feature1.jpg" alt="Physiological Data Processing" />
       <div class="feature-text">
         <h3>Adaptive Physiological Data Processing</h3>
@@ -59,7 +63,7 @@
     </div>
 
     <!-- Feature 2 -->
-    <div class="feature-item d-flex align-items-center justify-content-between mb-4">
+    <div class="feature-item">
       <img src="images/feature2.jpg" alt="Music Metadata Analysis" />
       <div class="feature-text">
         <h3>Music Metadata Analysis</h3>
@@ -73,12 +77,13 @@
     </div>
 
     <!-- Feature 3 -->
-    <div class="feature-item d-flex align-items-center justify-content-between mb-4">
+    <div class="feature-item">
       <img src="images/feature3.jpg" alt="Multimodal Data Fusion" />
       <div class="feature-text">
         <h3>Multimodal Data Fusion</h3>
         <p>
-          Experience the benefits of a truly multimodal music recommendation system. By fusing physiological signals, environmental cues, and detailed track attributes, our AI-driven music system delivers a contextual music recommendation that adapts to your surroundings. 
+          Experience the benefits of a truly multimodal music recommendation system. By fusing physiological signals, environmental cues, and detailed track attributes, our AI-driven music system delivers a contextual music recommendation that adapts to your surroundings.
+        </p>
         <p>
           Whether you’re on the move or unwinding at home, our engine leverages a smart playlist generator and automated song discovery to provide content-aware music playlists that feel personally crafted for every moment.
         </p>
@@ -86,7 +91,7 @@
     </div>
 
     <!-- Feature 4: User Experience -->
-    <div class="feature-item d-flex align-items-center justify-content-between">
+    <div class="feature-item">
       <img src="images/feature4.jpg" alt="Seamless User Experience" />
       <div class="feature-text">
         <h3>Seamless User Experience</h3>
@@ -107,8 +112,14 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (Optional) -->
+  <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

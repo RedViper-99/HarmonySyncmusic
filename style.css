@@ -172,12 +172,14 @@ header .logo h1 {
   justify-content: space-between;
   padding: 40px 0;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 .features .feature-item:last-child {
   border-bottom: none;
 }
 .features .feature-item img {
-  width: 40%;
+  width: 45%;
+  max-width: 500px;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -185,16 +187,16 @@ header .logo h1 {
   transform: scale(1.05);
 }
 .features .feature-item .feature-text {
-  width: 55%;
-  padding-left: 40px;
+  width: 50%;
+  padding: 0 40px;
   color: var(--text);
 }
+/* Alternate layout for even items */
 .features .feature-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 .features .feature-item:nth-child(even) .feature-text {
-  padding-left: 0;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 
 /* 11. About Page */
@@ -256,20 +258,54 @@ header .logo h1 {
 
 /* 15. Responsive Styles */
 @media (max-width: 768px) {
-  .nav-links { flex-direction: column; text-align: center; }
-  .menu-toggle { display: flex; }
-  .hero-content h2 { font-size: 2.5rem; }
-  .hero-content p { font-size: 1rem; }
+  .menu-toggle {
+    display: flex;
+  }
+  /* Animated dropdown menu on the right side */
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    flex-direction: column;
+    background: var(--header);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px; /* fixed width for dropdown */
+    z-index: 99;
+  }
+  .nav-links.active {
+    max-height: 500px; /* Adjust if more items are added */
+  }
+  .nav-links li {
+    text-align: right;
+    padding: 10px 20px;
+  }
+  /* Adjust hero section text sizes */
+  .hero-content h2 { 
+    font-size: 2.5rem;
+  }
+  .hero-content p { 
+    font-size: 1rem;
+  }
+  /* Features adjustments for mobile */
   .features .feature-item {
     flex-direction: column;
     text-align: center;
+    padding: 20px 0;
   }
   .features .feature-item img {
-    width: 80%;
-    margin: 0 auto 20px;
+    width: 100%;
+    margin-bottom: 15px;
   }
   .features .feature-item .feature-text {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 15px;
+  }
+  .features .feature-item h3 {
+    font-size: 1.5rem;
+  }
+  .features .feature-item p {
+    font-size: 1rem;
   }
 }
